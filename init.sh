@@ -9,9 +9,7 @@ else
   git clone "$repository_url" "$dotfiles_dir"
 fi
 
-dotfiles_dir="$HOME/.dotfiles"
-
-for file in "$dotfiles_dir/.*"; do
+for file in "dot/.*"; do
   if [ -f "$file" ] && [ "$(basename "$file")" != ".." ]; then
     echo "Installing $(basename "$file")"
     ln -sfn "$dotfiles_dir/$(basename "$file")" "$HOME/$(basename "$file")"
