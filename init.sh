@@ -17,9 +17,9 @@ for file in "$dotfiles_dir"/*; do
   fi
 done
 
-# Install zsh
-if test ! $(which omz); then
-  echo "...Installing ZSH"
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-  echo "$(curl -s https://raw.githubusercontent.com/zakaziko99/agnosterzak-ohmyzsh-theme/master/agnosterzak.zsh-theme)" > "$ZSH_CUSTOM/themes/agnosterzak.zsh-theme"
-fi
+# # Install zsh
+# if test ! $(which omz); then
+#   echo "...Installing ZSH"
+#   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+#   echo "$(curl -s https://raw.githubusercontent.com/zakaziko99/agnosterzak-ohmyzsh-theme/master/agnosterzak.zsh-theme)" > "$ZSH_CUSTOM/themes/agnosterzak.zsh-theme"
+# fi
