@@ -21,6 +21,6 @@ done
 if test ! $(which omz); then
   echo "...Installing ZSH"
   sudo apt install -y zsh
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   echo "$(curl -s https://raw.githubusercontent.com/zakaziko99/agnosterzak-ohmyzsh-theme/master/agnosterzak.zsh-theme)" > "$ZSH_CUSTOM/themes/agnosterzak.zsh-theme"
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
