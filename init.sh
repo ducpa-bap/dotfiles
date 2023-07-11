@@ -35,6 +35,6 @@ save_file() {
 if test ! $(which omz); then
   echo "...Installing ZSH"
   sudo apt install -y zsh
-  save_file "$HOME/.oh-my-zsh/custom/themes/agnosterzak.zsh-theme" "$(curl -s https://raw.githubusercontent.com/zakaziko99/agnosterzak-ohmyzsh-theme/master/agnosterzak.zsh-theme)"
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  save_file "$HOME/.oh-my-zsh/custom/themes/agnosterzak.zsh-theme" "$(curl -s https://raw.githubusercontent.com/zakaziko99/agnosterzak-ohmyzsh-theme/master/agnosterzak.zsh-theme)"
 fi
