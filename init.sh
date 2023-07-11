@@ -17,10 +17,24 @@ for file in "$dotfiles_dir"/*; do
   fi
 done
 
+save_file() {
+  local file_path="$1"
+  local content="$2"
+
+  # Kiểm tra xem tệp đã tồn tại hay chưa
+  if [ ! -f "$file_path" ]; then
+    # Tạo mới tệp nếu chưa tồn tại
+    touch "$file_path"
+  fi
+
+  # Lưu nội dung vào tệp
+  echo "$content" > "$file_path"
+}
+
 # Install zsh
 if test ! $(which omz); then
   echo "...Installing ZSH"
   sudo apt install -y zsh
+  save_file "$HOME/.oh-my-zsh/custom/themes/agnosterzak.zsh-theme" "$(curl -s https://raw.githubusercontent.com/zakaziko99/agnosterzak-ohmyzsh-theme/master/agnosterzak.zsh-theme)"
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-  echo "$(curl -s https://raw.githubusercontent.com/zakaziko99/agnosterzak-ohmyzsh-theme/master/agnosterzak.zsh-theme)" > "$HOME/.oh-my-zsh/custom/themes/agnosterzak.zsh-theme"
 fi
