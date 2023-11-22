@@ -1,0 +1,17 @@
+[core]
+  editor = vim
+  pager = less -FRX
+[format]
+  pretty = full
+[alias]
+  pc = "!git push origin HEAD"
+  up = "!f() { git checkout $1 && git pull origin $1; }; f"
+[user]
+  email = ducpa@bap.jp
+  name = Duc
+[pull]
+  rebase = true
+[push]
+  default = simple
+[credential]
+  helper = store
